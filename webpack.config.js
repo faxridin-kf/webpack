@@ -1,9 +1,10 @@
 // const path = require('path');
-// const HtmlwebPackPlugin = require('html-webpack-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const CopyPlugin = require('copy-webpack-plugin');
 // const ESLintPlugin = require('eslint-webpack-plugin');
+
 // const devServer = (isDev) =>
 //   !isDev
 //     ? {}
@@ -14,6 +15,7 @@
 //           contentBase: path.join(__dirname, 'public'),
 //         },
 //       };
+
 // const esLintPlugin = (isDev) =>
 //   isDev ? [] : [new ESLintPlugin({ extensions: ['ts', 'js'] })];
 
@@ -21,14 +23,13 @@
 //   mode: development ? 'development' : 'production',
 //   devtool: development ? 'inline-source-map' : false,
 //   entry: {
-//     app: './src/index.ts',
+//     main: './src/index.ts',
 //   },
 //   output: {
 //     filename: '[name].[contenthash].js',
 //     path: path.resolve(__dirname, 'dist'),
 //     assetModuleFilename: 'assets/[hash][ext]',
 //   },
-
 //   module: {
 //     rules: [
 //       {
@@ -54,13 +55,10 @@
 //       },
 //     ],
 //   },
-//   resolve: {
-//     extensions: ['.ts', '.js'],
-//   },
 //   plugins: [
 //     ...esLintPlugin(development),
-//     new HtmlwebPackPlugin({ template: './src/index.html' }),
 //     new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
+//     new HtmlWebpackPlugin({ template: './src/index.html' }),
 //     new CopyPlugin({
 //       patterns: [
 //         {
